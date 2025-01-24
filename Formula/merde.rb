@@ -5,31 +5,31 @@
 class Merde < Formula
   desc ""
   homepage ""
-  version "0.0.8"
+  version "0.0.9"
 
   depends_on "git" if OS.mac?
   depends_on "git" if OS.linux?
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/merde-bot/merde-cli/releases/download/v0.0.8/merde_Darwin_x86_64.tar.gz",
+      url "https://github.com/merde-bot/merde-cli/releases/download/v0.0.9/merde_Darwin_x86_64.tar.gz",
         headers: [
           "Accept: application/octet-stream",
           "Authorization: bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}"
         ]
-      sha256 "797124e5f0c861ce22bd2c5e9133ff8d7e30de7d086318d8f8111b2c4d24128a"
+      sha256 "e5c18d718fcd3c9433913d70ac7d939cbbdbd4be779129cc2c58f356661da069"
 
       def install
         bin.install "merde"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/merde-bot/merde-cli/releases/download/v0.0.8/merde_Darwin_arm64.tar.gz",
+      url "https://github.com/merde-bot/merde-cli/releases/download/v0.0.9/merde_Darwin_arm64.tar.gz",
         headers: [
           "Accept: application/octet-stream",
           "Authorization: bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}"
         ]
-      sha256 "33a0bad5fb78b4c3c3274f1f6f566e61c5f58ede9535bceabbb609abcc19200e"
+      sha256 "4b57fcea0a67c5f920385e9eba9efd367add0b900c78b8a5b799f9dc754a4544"
 
       def install
         bin.install "merde"
@@ -40,12 +40,12 @@ class Merde < Formula
   on_linux do
     if Hardware::CPU.intel?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/merde-bot/merde-cli/releases/download/v0.0.8/merde_Linux_x86_64.tar.gz",
+        url "https://github.com/merde-bot/merde-cli/releases/download/v0.0.9/merde_Linux_x86_64.tar.gz",
           headers: [
             "Accept: application/octet-stream",
             "Authorization: bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}"
           ]
-        sha256 "a98b9037ffc8534f4b1bc8b4aa45abbbdcaed73e159bb242075ef98a6cd7645a"
+        sha256 "bb3ed585d03520137af4a04f055c675748ddebfd72c9fd647892d110d0b39f07"
 
         def install
           bin.install "merde"
@@ -54,12 +54,12 @@ class Merde < Formula
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/merde-bot/merde-cli/releases/download/v0.0.8/merde_Linux_arm64.tar.gz",
+        url "https://github.com/merde-bot/merde-cli/releases/download/v0.0.9/merde_Linux_arm64.tar.gz",
           headers: [
             "Accept: application/octet-stream",
             "Authorization: bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}"
           ]
-        sha256 "69cae28d3a7f4e4f1cda5f81bd1e3e9f5be4f6732cc37ce3ab65f824285e74b5"
+        sha256 "f03b7d18cb43fa24e3492cfbc6cf5cbaef0a6030fa16564611e3896aee86850a"
 
         def install
           bin.install "merde"
